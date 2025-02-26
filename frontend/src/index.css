@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+a.active hr {
+  display: block;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (max-width: 840px) {
+  a.active {
+    color: black;
+    /* background-color:black; */
+    /* border-top:1px solid #303030; */
+  }
+}
