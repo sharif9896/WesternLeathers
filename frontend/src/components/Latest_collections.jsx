@@ -12,7 +12,7 @@ const Latest_collections = () => {
   const product = useSelector((state) => state.items.item[0]);
   const Blazer_categorys = useSelector((store) => store.Blazer_categorys[0]);
   useEffect(() => {
-    setfilterpro(product.slice(0,12));
+    setfilterpro(product.slice(0, 12));
   }, []);
   useEffect(() => {
     setbazercat(Blazer_categorys);
@@ -29,8 +29,7 @@ const Latest_collections = () => {
         </div>
       </div>
 
-
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 ">
         {blazercat.map((data, index) => (
           <Blazer_categoryscat
             key={index}
@@ -52,7 +51,7 @@ const Latest_collections = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 align-center  gap-y-6">
         {filterpro.map((data, index) => (
           <Productitem
             key={index}

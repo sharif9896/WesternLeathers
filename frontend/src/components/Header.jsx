@@ -29,58 +29,58 @@ const Header = () => {
 
   return (
     <>
-      <div className="fixed w-[100%] bg-white z-1 flex item-center justify-between gap-15 py-4 px-8 shadow">
+      <div className="flex items-center bg-white  justify-between py-5 font-medium mx-4">
         <Link to={"/"}>
           <img className="w-36 h-[60px]" src={assets.logo} alt="" />
         </Link>
-        <div className="hidden sm:flex flex-cols gap-6 my-4 text-gray-800 font-medium">
+
+        <ul className="hidden sm:flex gap-5 text-3m text-gray-700">
           <Link
-            className="flex item-center gap-3 text-xm hover:text-black cursor-pointer"
+            className="flex flex-col items-center gap-1 cursor-pointer"
             to={"/"}
           >
             <p>Home</p>
             <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
           </Link>
           <Link
-            className="flex item-center gap-3 text-xm hover:text-black cursor-pointer"
+            className="flex flex-col items-center gap-1 cursor-pointer"
             to={"/Shopping"}
           >
             <p>Shopping</p>
             <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
           </Link>
           <Link
-            className="flex item-center gap-3 text-xm hover:text-black cursor-pointer"
+            className="flex flex-col items-center gap-1 cursor-pointer"
             to={"/Collections"}
           >
             <p>Collections</p>
             <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
           </Link>
           <Link
-            className="flex item-center gap-3 text-xm hover:text-black cursor-pointer"
+            className="flex flex-col items-center gap-1 cursor-pointer"
             to={"/About"}
           >
             <p>About</p>
             <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
           </Link>
           <Link
-            className="flex item-center gap-3 text-xm hover:text-black cursor-pointer"
+            className="flex flex-col items-center gap-1cursor-pointer"
             to={"/Contact"}
           >
             <p>Contact</p>
             <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
           </Link>
-        </div>
-        <div className="flex flex-cols gap-5 my-4 text-gray-800 font-medium">
-          <div className="flex item-center gap-3 cursor-pointer text-sm w-7 h-6">
-            <Link to={"/Collections"}>
-              {" "}
-              <img
-                onClick={() => setshowsearch()}
-                src={assets.search_icon}
-                alt=""
-              />
-            </Link>
-          </div>
+        </ul>
+        <div className="flex gap-6 items-center">
+          <Link to={"/Collections"}>
+            {" "}
+            <img
+              onClick={() => setshowsearch()}
+              className="w-5 cursor-pointer"
+              src={assets.search_icon}
+              alt=""
+            />
+          </Link>
           <div className="group relative">
             <Link to={"/Login"}>
               <img
@@ -99,7 +99,7 @@ const Header = () => {
           </div>
           <Link to={"/Cart"} className="relative">
             <img src={assets.cart_icon} className="w-5 cursor-pointer" alt="" />
-            <div className="w-4 bg-black text-white text-center rounded-full leading-4 absolute right-[-6px] bottom-[4px] aspect-square text-[10px]">
+            <div className="w-4 bg-black text-white text-center rounded-full leading-4 absolute right-[-5px] bottom-[-5px] aspect-square text-[10px]">
               {getcartcount()}
             </div>
           </Link>
@@ -170,10 +170,6 @@ const Header = () => {
         </div>
       </div>
       <hr className="border-gray-300" />
-      <br />
-      <br />
-      <br />
-      <br />
     </>
   );
 };
