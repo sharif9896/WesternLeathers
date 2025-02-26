@@ -29,7 +29,7 @@ const Latest_collections = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 ">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
         {blazercat.map((data, index) => (
           <Blazer_categoryscat
             key={index}
@@ -51,7 +51,7 @@ const Latest_collections = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 align-center  gap-y-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 align-center gap-4 gap-y-6">
         {filterpro.map((data, index) => (
           <Productitem
             key={index}
