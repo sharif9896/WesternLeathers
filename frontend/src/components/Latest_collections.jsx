@@ -5,17 +5,21 @@ import Productitem from "./Productitem";
 import { products } from "../assets/assets";
 import Bestseller from "./Bestseller";
 import Blazer_categoryscat from "./Blazer_categoryscat";
+import Blazer_categoryscat2 from "./Blazer_categoryscat2";
 
 const Latest_collections = () => {
   const [filterpro, setfilterpro] = useState([]);
   const [blazercat, setbazercat] = useState([]);
+  const [cal, setcal] = useState([]);
   const product = useSelector((state) => state.items.item[0]);
+  const casual = useSelector((store) => store.casual[0]);
   const Blazer_categorys = useSelector((store) => store.Blazer_categorys[0]);
   useEffect(() => {
     setfilterpro(product.slice(0, 12));
   }, []);
   useEffect(() => {
     setbazercat(Blazer_categorys);
+    setcal(casual);
   }, []);
   return (
     <>
@@ -28,7 +32,6 @@ const Latest_collections = () => {
           </p>
         </div>
       </div>
-
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
         {blazercat.map((data, index) => (
           <Blazer_categoryscat
@@ -40,6 +43,17 @@ const Latest_collections = () => {
             category={data.category}
             subcategory={data.subcategory}
           ></Blazer_categoryscat>
+        ))}
+        {cal.map((data, index) => (
+          <Blazer_categoryscat2
+            key={index}
+            id={data._id}
+            name={data.name}
+            image={data.image}
+            description={data.description}
+            category={data.category}
+            subcategory={data.subcategory}
+          ></Blazer_categoryscat2>
         ))}
       </div>
       <div className="my-10">

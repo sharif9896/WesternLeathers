@@ -6,8 +6,8 @@ import Relatedpro from "../components/Relatedpro";
 import { cartAction } from "../store/Cart";
 import { toast } from "react-toastify";
 
-const Product = () => {
-  const product = useSelector((state) => state.items.item[0]);
+const Product2 = () => {
+  const product = useSelector((state) => state.item2.item[0]);
   const { productId } = useParams();
   const [productdata, setproductdata] = useState(false);
   const [image, setimage] = useState("");
@@ -30,31 +30,28 @@ const Product = () => {
     fetchproduct();
   }, [productId, product]);
 
- const addtocart = async (id, size) => {
-   let cartdata = structuredClone(carts);
-   if (!size) {
-     toast.error("Select the Product Size!");
-     return;
-   } else {
-     toast.success("Product added to Cart Successfully");
-   }
-   if (cartdata[id]) {
-     if (cartdata[id][size]) {
-       cartdata[id][size] += 1;
-     } else {
-       cartdata[id][size] = 1;
-     }
-   } else {
-     cartdata[id] = {};
-     cartdata[id][size] = 1;
-   }
-   dispatch(cartAction.setCart(cartdata));
- };
-    // else {
-    //   cartdata[id] = {};
-    //   cartdata[id][size] = 1;
-    //   dispatch(cartAction.setCart(cartdata));
-    // }
+  const addtocart = async (id, size) => {
+    let cartdata = structuredClone(carts);
+    if (cartdata[id]) {
+      if (cartdata[id][size]) {
+        cartdata[id][size] += 1;
+      } else {
+        cartdata[id][size] = 1;
+      }
+    } else {
+      cartdata[id] = {};
+      cartdata[id][size] = 1;
+    }
+    const mr = dispatch(cartAction.setCart(cartdata));
+    if (mr) {
+      toast.success("Product added to Cart Successfully");
+    }
+  };
+  // else {
+  //   cartdata[id] = {};
+  //   cartdata[id][size] = 1;
+  //   dispatch(cartAction.setCart(cartdata));
+  // }
   // console.log(carts);
   useEffect(() => {
     // console.log(carts)
@@ -98,7 +95,7 @@ const Product = () => {
             <p className="mt-5 text-gray-500 md:w-4/5">
               {productdata.description}
             </p>
-            <div className="flex flex-col gap-4 my-8">
+            {/* <div className="flex flex-col gap-4 my-8">
               <p>Select Size</p>
               <div className="flex gap-2">
                 {productdata.sizes.map((data, index) => (
@@ -113,7 +110,8 @@ const Product = () => {
                   </button>
                 ))}
               </div>
-            </div>
+            </div> */}
+            <br />
             <button
               onClick={() => addtocart(productdata._id, size)}
               className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700"
@@ -168,4 +166,4 @@ const Product = () => {
     <div className="opacity-0"></div>
   );
 };
-export default Product;
+export default Product2;

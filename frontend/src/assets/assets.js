@@ -1840,10 +1840,14 @@ export const products = [
     bestseller: false,
     rating: { stars: 7.3, count: 9.7 },
   },
+];
+
+export const product2 = [
   {
     _id: "aaaaa91",
     name: "Men Pure leather Wallets",
-    description: "Top Quality Leather Wallets for Men || UP to 50%",
+    description:
+      "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 299,
     image: [wl1, wl2, wl3, wl4],
     category: "Men",
@@ -1856,7 +1860,8 @@ export const products = [
   {
     _id: "aaaaa92",
     name: "Men Pure leather Wallets",
-    description: "Top Quality Leather Wallets for Men || UP to 50%",
+    description:
+      "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 599,
     image: [wl5, wl6, wl7, wl8],
     category: "Men",
@@ -1869,7 +1874,8 @@ export const products = [
   {
     _id: "aaaaa93",
     name: "Men Pure leather Wallets",
-    description: "Top Quality Leather Wallets for Men || UP to 50%",
+    description:
+      "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 899,
     image: [wl9, wl10, wl11, wl12],
     category: "Men",
@@ -1882,7 +1888,8 @@ export const products = [
   {
     _id: "aaaaa94",
     name: "Men Pure leather Wallets",
-    description: "Top Quality Leather Wallets for Men || UP to 50%",
+    description:
+      "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 299,
     image: [wl13, wl14, wl15, wl16],
     category: "Men",
@@ -1895,7 +1902,8 @@ export const products = [
   {
     _id: "aaaaa95",
     name: "Men Pure leather Wallets",
-    description: "Top Quality Leather Wallets for Men || UP to 50%",
+    description:
+      "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 299,
     image: [wl17, wl18, wl19, wl20],
     category: "Men",
@@ -1908,7 +1916,8 @@ export const products = [
   {
     _id: "aaaaa96",
     name: "Men Pure leather Wallets",
-    description: "Top Quality Leather Wallets for Men || UP to 50%",
+    description:
+      "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 299,
     image: [wl21, wl22, wl23, wl24],
     category: "Men",
@@ -1921,7 +1930,8 @@ export const products = [
   {
     _id: "aaaaa96",
     name: "Men Pure leather Bags",
-    description: "Top Quality Leather Bags for Men || UP to 50%",
+    description:
+      "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 1299,
     image: [bg1, bg2, bg3, bg4],
     category: "Men",
@@ -1999,7 +2009,7 @@ export const Blazer_category = [
   {
     _id: "aaaaae",
     name: "Men Round Neck Pure leather Belts",
-    description: "Top Quality Leather Jacket for Women || UP to 50%",
+    description: "Top Quality Leather Belts for Men|| UP to 50%",
     price: 2000,
     image: [ist5],
     category: "Men",
@@ -2022,6 +2032,9 @@ export const Blazer_category = [
     bestseller: true,
     rating: { stars: 6.5, count: 12 },
   },
+];
+
+export const casual = [
   {
     _id: "aaaaa9",
     name: "Men Pure leather Wallets",

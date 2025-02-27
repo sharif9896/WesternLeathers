@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 const Cart = () => {
   const cart = useSelector((store) => store.cart);
   const product = useSelector((store) => store.items.item[0]);
+  const product2 = useSelector((store) => store.item2.item[0]);
   const [cartdata, setcartdata] = useState([]);
   const dispatch = useDispatch();
 
@@ -35,8 +36,6 @@ const Cart = () => {
     //   }
     // });
     setcartdata(temp);
-
-
   }, []);
 
   const update = async (itemId, size, quanttity) => {
@@ -59,9 +58,9 @@ const Cart = () => {
         </div>
         <div>
           {cartdata.map((item, index) => {
-            const productData = product.find(
-              (product) => product._id === item._id
-            );
+            const productData =
+              product.find((product) => product._id === item._id) ||
+              product2.find((product) => product._id === item._id);
 
             return (
               <div
@@ -80,9 +79,7 @@ const Cart = () => {
                     </p>
                     <div className="flex items-center gap-5 mt-2">
                       <p>₹{productData.price}.00</p>
-                      <p className="px-2 sm:px-3 sm:py-1 ">
-                        {item.size}
-                      </p>
+                      <p className="px-2 sm:px-3 sm:py-1 ">{item.size}</p>
                     </div>
                   </div>
                 </div>

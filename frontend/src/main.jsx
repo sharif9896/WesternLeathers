@@ -15,6 +15,8 @@ import ecommerce from "./store";
 import Categories from "./components/Categories";
 import Cart from "./pages/Cart";
 import Place_Orders from "./pages/Place_Orders";
+import Categories2 from "./components/Categories2";
+import Product2 from "./pages/Product2";
 
 const route = createBrowserRouter([
   {
@@ -27,11 +29,13 @@ const route = createBrowserRouter([
       { path: "/About", element: <About /> },
       { path: "/Contact", element: <Contact /> },
       { path: "/Products/:productId", element: <Product /> },
+      { path: "/Products2/:productId", element: <Product2 /> },
       { path: "/Login ", element: <Login /> },
       { path: "/Categories/:category/:subcategory", element: <Categories /> },
+      { path: "/Categories2/:category/:subcategory", element: <Categories2 /> },
       { path: "/Cart", element: <Cart /> },
       { path: "/Login", element: <Login /> },
-      {path: "/Place_Orders", element: <Place_Orders/>}
+      { path: "/Place_Orders", element: <Place_Orders /> },
     ],
   },
 ]);
