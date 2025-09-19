@@ -5,7 +5,7 @@ const Productitem = ({ id, image, name, price, category, rating}) => {
     <>
       <Link
         className="text-gray-700 border  w-45 cursor-pointer  "
-        to={`/Products/${id}`}
+        href={`/Products/${id}`}
       >
         <div className="overflow-hidden">
           <div className="card">
